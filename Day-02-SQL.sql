@@ -107,7 +107,7 @@ Where Email = 'luisrojas@yahoo.cl'
 -- Find all tracks that are of the genre Metal and that have no composer and set the composer to be 'The darkness around us'
 Update Track
 Set Composer = "The darkness around us"
-Where Composer = null AND GenreId In (Select GenreId From Genre Where Name = "Metal")
+Where Composer IS null AND GenreId In (Select GenreId From Genre Where Name = "Metal")
 -- Once you're done with all of those refresh your page to blow away your changes to the database!
 --
 -- Group by
